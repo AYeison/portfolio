@@ -24,22 +24,29 @@
 </head>
 <body>  
   <!--header-->
-  <header class="site-header">
+  <header class="site-header relative z-50">
         <p class="text-center text-2xl">header</p>
   </header>
   <!--HEADER-->
     
     <main class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide  text-2xl text-center bg-white text-dark-100 dark:bg-dark-200 dark:text-white flex justify-center items-center hero-page" data-title="Inicio">Slide 1</div>
+          <div class="swiper-slide text-2xl text-center bg-white text-dark-100 dark:bg-dark-200 dark:text-white flex justify-center items-center ">Slide 2</div>
+          <div class="swiper-slide text-2xl text-center bg-white text-dark-100 dark:bg-dark-200 dark:text-white flex justify-center items-center ">Slide 3</div>
+          <div class="swiper-slide text-2xl text-center bg-white text-dark-100 dark:bg-dark-200 dark:text-white flex justify-center items-center ">Slide 4</div>
         </div>
+
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination" style="max-width:80px;padding-top:60px">
       </main>
 
 
-    <script src="public/dist/js/swiper.min.js" defer></script>
-    <script src="public/dist/js/homepage.bundle.js" defer></script>
+      <footer class="absolute bottom-0 left-0 right-0 z-50">
+        <p class="text-center text-2xl">footer</p>
+      </footer>
+
+ 
+    <script src="public/dist/js/homepage.bundle.js"></script>
 </body>
 </html>
