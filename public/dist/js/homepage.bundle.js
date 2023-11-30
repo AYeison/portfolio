@@ -1,0 +1,2 @@
+(()=>{"use strict";!function(){document.addEventListener("DOMContentLoaded",(function(){new Swiper(".swiper-container",{direction:"vertical",mousewheelControl:!0,slidesPerView:1})}))}()})();
+//# sourceMappingURL=homepage.bundle.js.map
