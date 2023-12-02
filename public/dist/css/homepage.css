@@ -39,7 +39,7 @@ html.dark .oneline_bullet{
   background-color:rgba(255, 255, 255, 0.5);
   }
 .oneline_bullet{
-  background-color: rgba(34, 39, 68, 0.5);
+  background-color: rgba(246, 186, 111, 0.5);
   }
   .swiper-pagination-bullet:not(.swiper-pagination-bullet-active){
     opacity: 0.6 !important;
@@ -48,21 +48,21 @@ html.dark .oneline_bullet{
   }
   .swiper-pagination-bullet.swiper-pagination-bullet-active{
   opacity: 1 !important;
-  background: #643DDB !important;
-  color: #ffffff;
+  background: #f6ba6f !important;
+  color: #170c1f;
 }
 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active){
-  fill:#D915EF;
+  fill:#ffffff;
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active svg{
-  fill:#ffffff!important;
+  fill:#170c1f!important;
 }
 .dark .swiper-pagination-bullet:not(.swiper-pagination-bullet-active){
-  color: #ffffff;	
+  color: #f6ba6f;	
 }	
         
 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active){
-  color: #222744;
+  color: #f6ba6f;
 }	
 
 .swiper-pagination-bullet{
@@ -74,9 +74,54 @@ html.dark .oneline_bullet{
   width: 80px !important;
   font-size: 7pt;
   font-weight:bold;
-  color: #222744;
+  color: #f6ba6f;
   padding: 0.15rem 0.25rem !important;
   border-radius : 1.5rem !important; 
 
 
 }
+
+
+
+.register_btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: #d6d6d6;
+      background-color: #e0e8ef;
+      color: #222744;
+      border-style: solid;
+      border-width: 2px 2px 2px 2px;
+      border-color: rgba(255, 255, 255, 0.333);
+      border-radius: 40px 40px 40px 40px;
+      padding: 16px 24px 16px 28px;
+      transform: translate(0px, 0px) rotate(0deg);
+      transition: 0.2s;
+      box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%)
+    }
+    .register_btn:hover {
+      color: #516d91;
+      background-color: #E5EDF5;
+      box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+    }
+  
+    .register_btn:active {
+     box-shadow: none;
+    }
+    .hero-page #bgvid {
+      object-fit: cover !important;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      }
+
+    

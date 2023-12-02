@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,25 +16,81 @@
  
     <!--links-->
     <link rel="stylesheet" href="public/dist/css/main.css">
+    <link rel="stylesheet" href="public/dist/css/animate.min.css">
     <link rel="stylesheet" href="public/dist/css/swiper-bundle.css">
     <link rel="stylesheet" href="public/dist/css/homepage.css">
+    <link rel="stylesheet" href="style.css">
 
     <title>YADEV Diseño y Desarrollo web</title>
 
 </head>
 <body>  
   <!--header-->
-  <header class="site-header relative z-50">
-        <p class="text-center text-2xl">header</p>
+  <header class="site-header relative z-50 w-full h-[40px] xl:h-[60px] ">
+        <div class="flex flex-row w-full h-full items-center px-5">
+          <div class="site-logo ml-auto inline-flex flex-row justify-center items-center bg-dark-500/50 my-2 rounded-full border-gray-600 border px-2">
+            <div class="w-[30px]  xl:w-[30px] p-1">
+              <img src="public/source/yadevlogo.svg" alt="logo" class="max-w-full h-auto text-yyellow-100">
+            </div>
+            
+            <p class="text-yyellow-100 text-lg font-black">YADEV</p>
+          </div>
+        </div>
   </header>
   <!--HEADER-->
     
     <main class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide  text-2xl text-center bg-white text-dark-100 dark:bg-dark-200 dark:text-white flex justify-center items-center hero-page" data-title="Inicio">Slide 1</div>
-          <div class="swiper-slide text-2xl text-center bg-white text-dark-100 dark:bg-dark-200 dark:text-white flex justify-center items-center ">Slide 2</div>
-          <div class="swiper-slide text-2xl text-center bg-white text-dark-100 dark:bg-dark-200 dark:text-white flex justify-center items-center ">Slide 3</div>
-          <div class="swiper-slide text-2xl text-center bg-white text-dark-100 dark:bg-dark-200 dark:text-white flex justify-center items-center ">Slide 4</div>
+          <div class="swiper-slide  text-2xl text-center bg-white text-dark-100 dark:bg-dark-200 dark:text-white flex justify-center items-center hero-page" data-title="Inicio">
+            <div class="text-video absolute z-20 w-full h-full top-0 left-0 flex px-5 sm:px-5 md:px-12 lg:px-14 xl:px-24  2xl:px-48  items-center justify-center flex-col animate__animated animate__fadeIn">
+              <h2 class="text-xl xl:text-4xl font-bold text-center text-white"><span>
+                <span class="font-black text-yyellow-100 ">YADEV</span> es estetica, velocidad y calidad.
+              </span>
+              <br class="hidden xl:block">
+                <span class="font-black uppercase text-white">Lo más importante <span class="text-yyellow-100 ">para tu sitio web.</span></span>
+              </h2>
+        <div class="btn_register_div py-5 animate__animated animate__fadeIn">
+        <button class="register_btn animate__animated animate__pulse animate__delay-2s animate__infinite infinite ">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> Contactar
+      </button>
+              
+        </div>
+      
+          </div>
+          <video playsinline autoplay muted loop  id="bgvid" style="object-fit:cover;height:100%; width:100%;" >
+        <source src="./public/source/video2.mp4"type="video/mp4">
+      </video>
+            <div class="overlay-hero absolute bg-gradient-to-b to-[#170c1f] from-[#170c1f]/50   z-10 w-full h-full top-0 left-0"></div>
+            <svg class="w-5 h-5 text-yyellow-100  bottom-5 left-1/2 -translate-x-1/2 absolute z-20 animate__animated animate__bounce animate__infinite infinite animate__slower	" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
+        </svg>
+
+          </div>
+          <div class="swiper-slide  bg-[#170c1f]  text-white flex justify-center  items-center flex-col xl:flex-row " data-title="Sobre mí">
+            <div class="basis-full xl:basis-1/2 order-2 xl:order-1 text-yyellow-100 pr-12 pl-14 xl:py-4">
+              <div class="title text-center mb-1 xl:mb-5">
+                <h3 class="text-yyellow-100 text-3xl xl:text-5xl font-black">Yeison Armas</h3>
+                <p class="text-xl font-light">Diseñador y Desarrollador Web</p>
+              </div>
+              <div class="paragrafs text-lg overflow-y-auto max-h-[300px]">
+                <p class="my-2">
+                  Oriundo de Venezuela, Yeisona Armas es un Desarrollador Web especializado en Wordpress y creación de sitios webs para empresas.
+                </p>
+              <p class="my-2">
+              Con conocimientos en SEO Optimization y dominio en Marketing digital, posee los conocimientos necesarios para crear el sitio web ideal. 
+              </p>
+              <p class="my-2">
+                Respetando los lineamientos que todo buen sitio web de seguir. Estica profesional, cargas rapidas, seguridad y buenas practicas. 
+              </p>
+              </div>
+            </div>
+            <div class="basis-full xl:basis-1/2  h-full order-1 xl:order-2">
+                <img src="public/source/diseñoportafolio-biografia.png" alt="" class="h-full w-full max-w-full object-cover xl:object-contain">
+            </div>
+          </div>
+          <div class="swiper-slide text-2xl text-center bg-white text-dark-100 dark:bg-dark-200 dark:text-white flex justify-center items-center " data-title="Proyectos">Proyectos</div>
+          <div class="swiper-slide text-2xl text-center bg-white text-dark-100 dark:bg-dark-200 dark:text-white flex justify-center items-center " data-title="Habilidades">Habilidades</div>
+          <div class="swiper-slide text-2xl text-center bg-white text-dark-100 dark:bg-dark-200 dark:text-white flex justify-center items-center " data-title="footer"></div>
         </div>
 
         <div class="swiper-scrollbar"></div>
@@ -42,8 +98,12 @@
       </main>
 
 
-      <footer class="absolute bottom-0 left-0 right-0 z-50">
-        <p class="text-center text-2xl">footer</p>
+      <footer class="absolute bottom-0 left-0 right-0 px-5 py-2 bg-dark-300 site-footer">
+        <p class="text-center text-2xl text-white">footer</p>
+        <p class="text-center text-2xl text-white">footer</p>
+        <p class="text-center text-2xl text-white">footer</p>
+        <p class="text-center text-2xl text-white">footer</p>
+        <p class="text-center text-2xl text-white">footer</p>
       </footer>
 
  

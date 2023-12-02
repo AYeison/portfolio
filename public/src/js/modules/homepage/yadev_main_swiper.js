@@ -44,6 +44,8 @@ export default function yadev_main_swiper(args = {}){
         const total_slide = document.querySelectorAll('.swiper-slide') ? document.querySelectorAll('.swiper-slide').length : null;
         var swiper = new Swiper('.swiper-container', {
             direction: 'vertical',
+            speed: 1000,
+            allowTouchMove: true,
             mousewheelControl: true,
             mousewheel: {
                 sensitivity: 100
@@ -60,7 +62,7 @@ export default function yadev_main_swiper(args = {}){
                 renderBullet: function (index, className) {
                 const slides = document.querySelectorAll('.swiper-slide');
                 const slides_title = slides[index].hasAttribute('data-title') ? slides[index].getAttribute('data-title') : 'notitle';
-               
+
                   spaces = fk_math(vheight, total_slide);
                     return   '<span class="' + className + ' relative z-10" style="margin:'+spaces+'px 0px"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" class="w-5 h-5"><path  d="M37,13L29,3l5.5,10L25,22V5l1-2l-1.5,0.5L24,1l-0.5,2.5L22,3l1,2v17l-9.5-9L19,3l-8,10l11,10.5L11,34	l12,12l1,1l1-1l12-12L26,23.5L37,13z M14.5,34l8.5-8.5v17.447L14.5,34z M33.5,34L25,42.947V25.5L33.5,34z"/></svg><span>'+slides_title +'</span></span>';
                   },
@@ -72,14 +74,16 @@ export default function yadev_main_swiper(args = {}){
             on:{
                 resize: update_params,
                 paginationRender: function (swiper , el){
+                    const footer = document.querySelector('.site-footer');
                     if(!one_line_bullet){
                       const  html_line_bullet = document.createElement('div');
-                      html_line_bullet.className = 'absolute w-px  oneline_bullet top-1/2 left-3 -translate-y-1/2 z-0';
+                      html_line_bullet.className = 'absolute w-[3px]  oneline_bullet top-1/2 left-3 -translate-y-1/2 z-0';
                       html_line_bullet.style.height = vheight + 'px';
                       el.style.height = vheight + 'px';
                       el.appendChild(html_line_bullet);
                     }
                     one_line_bullet = true;
+                    console.log(footer.clientHeight)
                    
                   },
                   slideChange : function(swiper){
@@ -106,6 +110,8 @@ export default function yadev_main_swiper(args = {}){
                         
                        
                       }
+
+                      
                   }
             }
           });

@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./**/*.{html,js,php}",
+    "./**/*.{html,js}",
     "!./node_modules/*/**",
     "./node_modules/flowbite/**/*.js"
   ],
@@ -52,7 +52,12 @@ module.exports = {
       'pred' : '#D83F31',
       'porange': '#EE9322',
       'pyellow' : '#E9B824',
-      'pgreen' : '#219C90'
+      'pgreen' : '#219C90',
+      'yblack' : "#170c1f",
+      'yyellow' : {
+        100:"#f6ba6f",
+        200: "#f59d30"
+      }
     },
     fontFamily:{
       sans: ['Roboto', 'sans-serif']
