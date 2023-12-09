@@ -1229,16 +1229,20 @@ input[type="range"]::-ms-fill-lower {
   margin-bottom: 0.5rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .ml-auto {
   margin-left: auto;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
-.mb-1 {
-  margin-bottom: 0.25rem;
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .block {
@@ -1285,8 +1289,8 @@ input[type="range"]::-ms-fill-lower {
   height: 100%;
 }
 
-.max-h-\[500px\] {
-  max-height: 500px;
+.h-4 {
+  height: 1rem;
 }
 
 .max-h-\[300px\] {
@@ -1305,16 +1309,24 @@ input[type="range"]::-ms-fill-lower {
   width: 16rem;
 }
 
-.w-\[30px\] {
-  width: 30px;
-}
-
 .w-\[3px\] {
   width: 3px;
 }
 
 .w-full {
   width: 100%;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.max-w-\[100px\] {
+  max-width: 100px;
 }
 
 .max-w-full {
@@ -1367,32 +1379,8 @@ input[type="range"]::-ms-fill-lower {
   justify-content: center;
 }
 
-.overflow-auto {
-  overflow: auto;
-}
-
 .overflow-y-auto {
   overflow-y: auto;
-}
-
-.whitespace-nowrap {
-  white-space: nowrap;
-}
-
-.whitespace-pre {
-  white-space: pre;
-}
-
-.whitespace-pre-line {
-  white-space: pre-line;
-}
-
-.whitespace-pre-wrap {
-  white-space: pre-wrap;
-}
-
-.whitespace-break-spaces {
-  white-space: break-spaces;
 }
 
 .rounded-full {
@@ -1423,9 +1411,18 @@ input[type="range"]::-ms-fill-lower {
   border-width: 1px;
 }
 
+.border-r {
+  border-right-width: 1px;
+}
+
 .border-gray-600 {
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
+
+.border-gray-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 
 .bg-\[\#170c1f\] {
@@ -1438,8 +1435,8 @@ input[type="range"]::-ms-fill-lower {
   background-color: rgb(13 13 20 / var(--tw-bg-opacity));
 }
 
-.bg-dark-500\/50 {
-  background-color: rgb(3 3 5 / 0.5);
+.bg-dark-300\/50 {
+  background-color: rgb(13 13 20 / 0.5);
 }
 
 .bg-gray-200 {
@@ -1450,6 +1447,14 @@ input[type="range"]::-ms-fill-lower {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-yblack-200\/50 {
+  background-color: rgb(15 8 20 / 0.5);
+}
+
+.bg-yblack-200\/90 {
+  background-color: rgb(15 8 20 / 0.9);
 }
 
 .bg-gradient-to-b {
@@ -1475,11 +1480,6 @@ input[type="range"]::-ms-fill-lower {
   padding: 0.25rem;
 }
 
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1500,9 +1500,9 @@ input[type="range"]::-ms-fill-lower {
   padding-bottom: 1.25rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .pl-14 {
@@ -1517,13 +1517,14 @@ input[type="range"]::-ms-fill-lower {
   text-align: center;
 }
 
-.text-right {
-  text-align: right;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-lg {
@@ -1534,21 +1535,6 @@ input[type="range"]::-ms-fill-lower {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-black {
@@ -1588,6 +1574,11 @@ input[type="range"]::-ms-fill-lower {
 .text-yyellow-100 {
   --tw-text-opacity: 1;
   color: rgb(246 186 111 / var(--tw-text-opacity));
+}
+
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
 .shadow {
@@ -1634,6 +1625,13 @@ input[type="range"]::-ms-fill-lower {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 375px) {
+  .xs\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:px-5 {
     padding-left: 1.25rem;
@@ -1652,6 +1650,11 @@ input[type="range"]::-ms-fill-lower {
   .lg\:px-14 {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
+  }
+
+  .lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
@@ -1674,10 +1677,6 @@ input[type="range"]::-ms-fill-lower {
 
   .xl\:h-\[60px\] {
     height: 60px;
-  }
-
-  .xl\:w-\[30px\] {
-    width: 30px;
   }
 
   .xl\:basis-1\/2 {

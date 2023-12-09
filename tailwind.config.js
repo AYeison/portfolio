@@ -53,7 +53,10 @@ module.exports = {
       'porange': '#EE9322',
       'pyellow' : '#E9B824',
       'pgreen' : '#219C90',
-      'yblack' : "#170c1f",
+      'yblack' : {
+        100 : "#170c1f",
+        200 : '#0F0814'
+      },
       'yyellow' : {
         100:"#f6ba6f",
         200: "#f59d30"
