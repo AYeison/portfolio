@@ -44,12 +44,12 @@ export default function yadev_main_swiper(args = {}){
         const total_slide = document.querySelectorAll('.swiper-slide') ? document.querySelectorAll('.swiper-slide').length : null;
         var swiper = new Swiper('.swiper-container', {
             direction: 'vertical',
-            speed: 1000,
+            speed: 800,
             allowTouchMove: true,
             mousewheelControl: true,
             freeMode: true,
             mousewheel: {
-                sensitivity: 1000
+                sensitivity: 3000
               },
             slidesPerView: 1,
             scrollbar: {

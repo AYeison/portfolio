@@ -7,7 +7,7 @@ body {
   padding:0;
 }
 .swiper-pagination{
-left:1rem !important;
+left:.75rem !important;
 }
 .swiper-container{
 position: absolute;
