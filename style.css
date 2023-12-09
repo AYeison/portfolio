@@ -1,3 +1,19 @@
 html, body{
     background: #000;
 }
+
+
+
+.cls-1 {
+  filter: url(#filter);
+}
+
+.cls-2 {
+  fill: none;
+  stroke: #1b1424;
+  stroke-width: 30px;
+}
+
+.cls-3 {
+  fill: #1b1424;
+}

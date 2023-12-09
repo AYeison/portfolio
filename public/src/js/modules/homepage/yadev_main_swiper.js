@@ -47,8 +47,9 @@ export default function yadev_main_swiper(args = {}){
             speed: 1000,
             allowTouchMove: true,
             mousewheelControl: true,
+            freeMode: true,
             mousewheel: {
-                sensitivity: 100
+                sensitivity: 1000
               },
             slidesPerView: 1,
             scrollbar: {
@@ -63,8 +64,20 @@ export default function yadev_main_swiper(args = {}){
                 const slides = document.querySelectorAll('.swiper-slide');
                 const slides_title = slides[index].hasAttribute('data-title') ? slides[index].getAttribute('data-title') : 'notitle';
 
+
                   spaces = fk_math(vheight, total_slide);
-                    return   '<span class="' + className + ' relative z-10" style="margin:'+spaces+'px 0px"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" class="w-5 h-5"><path  d="M37,13L29,3l5.5,10L25,22V5l1-2l-1.5,0.5L24,1l-0.5,2.5L22,3l1,2v17l-9.5-9L19,3l-8,10l11,10.5L11,34	l12,12l1,1l1-1l12-12L26,23.5L37,13z M14.5,34l8.5-8.5v17.447L14.5,34z M33.5,34L25,42.947V25.5L33.5,34z"/></svg><span>'+slides_title +'</span></span>';
+                    return   '<span class="' + className + ' relative z-10" style="margin:'+spaces+`px 0px"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-5 h-5" viewBox="0 0 512 512"> <defs>
+                    <filter id="filter" filterUnits="userSpaceOnUse">
+                      <feFlood result="flood" flood-color="#fff"/>
+                      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+                      <feBlend result="blend" in2="SourceGraphic"/>
+                    </filter>
+                  </defs>
+                  <g id="Grupo_1" data-name="Grupo 1" class="cls-1">
+                    <circle id="Elipse_1" data-name="Elipse 1" class="cls-2" cx="256" cy="256" r="226"/>
+                    <circle id="Elipse_1_copia" data-name="Elipse 1 copia" class="cls-3" cx="256" cy="256" r="180.938"/>
+                  </g>
+                </svg><span>`+slides_title +'</span></span>';
                   },
                  
               },       

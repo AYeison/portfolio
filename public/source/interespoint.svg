@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #1b1424;
+        stroke-width: 30px;
+      }
+
+      .cls-3 {
+        fill: #1b1424;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_1" data-name="Grupo 1" class="cls-1">
+    <circle id="Elipse_1" data-name="Elipse 1" class="cls-2" cx="256" cy="256" r="226"/>
+    <circle id="Elipse_1_copia" data-name="Elipse 1 copia" class="cls-3" cx="256" cy="256" r="180.938"/>
+  </g>
+</svg>
