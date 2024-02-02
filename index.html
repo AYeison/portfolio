@@ -68,32 +68,44 @@
           <video playsinline autoplay muted loop  id="bgvid" style="object-fit:cover;height:100%; width:100%;" >
         <source src="./public/source/video1.mp4"type="video/mp4">
       </video>
-            <div class="overlay-hero absolute bg-gradient-to-b to-[#170c1f] from-[#170c1f]/50   z-10 w-full h-full top-0 left-0"></div>
+        <div class="filter-texture absolute top-0 left-0 h-full w-full z-[15]">
+          <img src="public/source/texturehero.jpg" alt="" class="object-cover w-full h-full sepia  invert opacity-10 contrast-200	">
+        </div>
+            <div class="overlay-hero absolute bg-gradient-to-b to-[#170c1f] from-[#170c1f]/80   z-10 w-full h-full top-0 left-0"></div>
             <svg class="w-5 h-5 text-yyellow-100  bottom-5 left-1/2 -translate-x-1/2 absolute z-20 animate__animated animate__bounce animate__infinite infinite animate__slower	" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
         </svg>
 
           </div>
           <div class="swiper-slide  bg-[#170c1f]  text-white flex justify-center  items-center flex-col xl:flex-row " data-title="Sobre mí">
-            <div class="basis-full xl:basis-1/2 order-2 xl:order-1 text-yyellow-100 pr-12 pl-14 xl:py-4">
-              <div class="title text-center mb-1 xl:mb-5">
-                <h3 class="text-yyellow-100 text-3xl xl:text-5xl font-black">Yeison Armas</h3>
-                <p class="text-xl font-light">Diseñador y Desarrollador Web</p>
-              </div>
-              <div class="paragrafs text-lg overflow-y-auto max-h-[300px]">
+            <div class="basis-full xl:basis-1/2 order-2 xl:order-1 text-yyellow-100 pr-12 pl-14 xl:py-4 h-full flex flex-col justify-center items-center " style="background-image: url(public/source/textureeffect.png); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+              <div class="bodytxt ">
+                <div class="title text-center mb-1 xl:mb-5">
+                  <h3 class="text-yyellow-100 text-xl md:text-2xl lg:text-3xl xl:text-5xl font-black">Yeison Armas</h3>
+                  <p class="text-md md:text-lg lg:text-xl font-light">Diseñador y Desarrollador Web</p>
+                </div>
+                <div class="paragrafs text-sm md:text-md lg:text-lg">
+                  <p class="my-2">
+                    Oriundo de Venezuela, Yeisona Armas es un Desarrollador Web especializado en Wordpress y creación de sitios webs para empresas.
+                  </p>
                 <p class="my-2">
-                  Oriundo de Venezuela, Yeisona Armas es un Desarrollador Web especializado en Wordpress y creación de sitios webs para empresas.
+                Con conocimientos en SEO Optimization y dominio en Marketing digital, posee los conocimientos necesarios para crear el sitio web ideal. 
                 </p>
-              <p class="my-2">
-              Con conocimientos en SEO Optimization y dominio en Marketing digital, posee los conocimientos necesarios para crear el sitio web ideal. 
-              </p>
-              <p class="my-2">
-                Respetando los lineamientos que todo buen sitio web de seguir. Estica profesional, cargas rapidas, seguridad y buenas practicas. 
-              </p>
+                <p class="my-2">
+                  Respetando los lineamientos que todo buen sitio web de seguir. Estica profesional, cargas rapidas, seguridad y buenas practicas. 
+                </p>
+                </div>
               </div>
             </div>
-            <div class="basis-full xl:basis-1/2  h-full order-1 xl:order-2">
-                <img src="public/source/diseñoportafolio-biografia.png" alt="" class="h-full w-full max-w-full object-cover xl:object-contain">
+            <div class="basis-full xl:basis-1/2  h-full order-1 xl:order-2 relative w-full">
+              <div class="overlay-gradient"></div>
+                <img src="public/source/ly1.png" alt="ly1.png" class="h-full w-full max-w-[250px] xs:max-w-[300px] sm:max-w-[600px] xl:max-w-full  object-contain  absolute top-0 left-0 right-0 bottom-0 z-30  m-auto">
+                <img src="public/source/ly2.png" alt="ly2.png" class="h-full w-full max-w-[250px] xs:max-w-[300px] sm:max-w-[600px] xl:max-w-full  object-contain absolute top-0 left-0 right-0 bottom-0 z-10 m-auto ">
+                <div id="p-container" class="overflow-hidden">
+                  <div></div>
+                </div>
+                <img id="bgly3" src="public/source/ly3.png" alt="ly3.png" class="h-full w-full max-w-[250px] xs:max-w-[300px] sm:max-w-[600px] xl:max-w-full  object-contain absolute top-0 left-0 right-0 bottom-0 z-0 m-auto">
+            
             </div>
           </div>
           <div class="swiper-slide text-2xl text-center bg-white text-dark-100 dark:bg-dark-200 dark:text-white flex justify-center items-center " data-title="Proyectos">Proyectos</div>
@@ -102,7 +114,7 @@
         </div>
 
         <div class="swiper-scrollbar"></div>
-        <div class="swiper-pagination" style="max-width:80px;padding-top:60px">
+        <div class="swiper-pagination" style="max-width:80px;">
       </main>
 
 

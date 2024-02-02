@@ -1,4 +1,5 @@
 
+
 export default function yadev_main_swiper(args = {}){
   
     let await_args = {};
@@ -6,11 +7,24 @@ export default function yadev_main_swiper(args = {}){
     if(0 < Object.keys(args).length && args.constructor === Object){
         await_args = args;
     }
-    const {gsap : gsap = null,  map_key_exist : map_key_exist=null, Mirai_event_maps : Mirai_event_maps = null, Tabs : Tabs = null, Swiper : Swiper = null} = await_args;
+    const {gsap : gsap = null,  map_key_exist : map_key_exist=null, Mirai_event_maps : Mirai_event_maps = null, Tabs : Tabs = null, Swiper : Swiper = null, pAnim : pAnim = null} = await_args;
+
+    if(pAnim){
+      pAnim();
+
+      document.addEventListener('resize', pAnim());
+    }
 
     let one_line_bullet = false;
     let vheight = window.innerHeight;
     let spaces;
+    const tiempoDeInactividad = 1000;
+    let lastMouseX = null;
+    let lastMouseY = null;  
+    let event_move = null;
+    let nomove = false;
+    let timer =  null;
+
     const update_params = (swiper)=>{
         const pagination = swiper.pagination.el;
         const bullets = document.querySelectorAll('.swiper-pagination-bullet');
@@ -47,9 +61,9 @@ export default function yadev_main_swiper(args = {}){
             speed: 1000,
             allowTouchMove: true,
             mousewheelControl: true,
-            freeMode: false,
+            simulateTouch : true,
             mousewheel: {
-                sensitivity: 500
+                sensitivity: 100
               },
             slidesPerView: 1,
             scrollbar: {
@@ -128,8 +142,73 @@ export default function yadev_main_swiper(args = {}){
                   }
             }
           });
-      }
 
+         
+      }
+      function detectarInactividad() {
+       
+        const mirai_read_control = document.querySelector('.swiper-pagination');
+         let t;
+        if(event_move){
+            const currentMouseX = !event_move.touches ? event_move.clientX : event_move.touches[0].clientX;
+            const currentMouseY = !event_move.touches ? event_move.clientY : event_move.touches[0].clientY;
+  
+       
+            if (lastMouseX === null && lastMouseY === null) {
+                // Esta es la primera vez que se detecta la posición del puntero
+                lastMouseX = currentMouseX;
+                lastMouseY = currentMouseY;
+              } else if (currentMouseX === lastMouseX && currentMouseY === lastMouseY) {
+                // El puntero no se ha movido durante el tiempo de inactividad especificado
+                if(t){
+                  t.clearProps('opacity,display');
+                  t.pause();
+                      }
+               
+                 
+                 
+                  t = gsap.to(mirai_read_control,  {display:'none', opacity:0,  duration:1}); nomove = false;
+               
+              } else {
+                // El puntero se ha movido, restablecer el temporizador y la posición
+                if(t){
+                  t.clearProps('opacity,display');
+                 t.pause();
+                      }
+               
+                  t = gsap.from(mirai_read_control,  {display:'block', opacity:1, duration:1}); 
+                  nomove = true;
+              
+         
+             
+                lastMouseX = currentMouseX;
+                lastMouseY = currentMouseY;
+                clearTimeout(timer);
+                timer = setTimeout(detectarInactividad, tiempoDeInactividad);
+              }
+        }else{
+         gsap.fromTo(mirai_read_control, { display:'block', opacity:1}, {display:'none', opacity:0, duration:1});
+            nomove = false;
+        }
+      }
+      timer = setTimeout(detectarInactividad, tiempoDeInactividad);
+   
+    document.addEventListener('mouseover', (e)=>{
+        event_move = e;
+      
+        detectarInactividad();
+    });
+  
+    document.addEventListener('touchstart', (e) => {
+        event_move = e;
+        detectarInactividad();
+    });
+    
+    document.addEventListener('touchmove', (e) => {
+        event_move = e;
+       
+        detectarInactividad();
+    });
 
 
       document.addEventListener('DOMContentLoaded', init_swiper);
