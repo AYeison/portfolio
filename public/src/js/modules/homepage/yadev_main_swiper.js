@@ -58,7 +58,7 @@ export default function yadev_main_swiper(args = {}){
         const total_slide = document.querySelectorAll('.swiper-slide') ? document.querySelectorAll('.swiper-slide').length : null;
         var swiper = new Swiper('.swiper-container', {
             direction: 'vertical',
-            speed: 1000,
+            speed: 800,
             allowTouchMove: true,
             mousewheelControl: true,
             simulateTouch : true,
